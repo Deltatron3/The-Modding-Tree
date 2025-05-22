@@ -1,4 +1,4 @@
-addLayer("q", {
+addLayer("p", {
     name: "Quarks", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "Q", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
@@ -6,7 +6,7 @@ addLayer("q", {
         unlocked: true,
 		points: new Decimal(0),
     }},
-    color: "#4BDC13",
+    color: "E81414",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "Quarks", // Name of prestige currency
     baseResource: "Gluons", // Name of resource prestige is based on
@@ -22,7 +22,17 @@ addLayer("q", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "q", description: "Q: Reset for Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
-})
+    })
+
+    ```js
+    upgrades: {
+```js
+        11: {
+
+        },
+```
+    },
+```
