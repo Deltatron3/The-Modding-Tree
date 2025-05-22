@@ -26,13 +26,3 @@ addLayer("p", {
     ],
     layerShown(){return true}
     })
-
-    ```js
-    upgrades: {
-```js
-        11: {
-
-        },
-```
-    },
-```
