@@ -15,7 +15,6 @@ addLayer("u", {
     exponent: 0.75, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         let mult = new Decimal(1)
-        if (hasUpgrade('u', 11)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -27,7 +26,7 @@ addLayer("u", {
     ],
     upgrades: {
         11: {
-        title: "First duplications 1",
+        title: "Up duplications 1",
         description: "Add +1 base to Gluon gain",
         cost: new Decimal(2),
         },
@@ -61,7 +60,15 @@ addLayer("c", {
     hotkeys: [
         {key: "c", description: "c: Reset for Charm Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-        layerShown(){return true}
+     upgrades: {
+        11: {
+        title: "Charm duplications 1",
+        description: "Add +1 base to Gluon gain",
+        cost: new Decimal(2),
+        },
+    
+    },
+    layerShown(){return true}
 })
 addLayer("t", {
     name: "Top Quarks", // This is optional, only used in a few places, If absent it just uses the layer id.
@@ -89,7 +96,7 @@ addLayer("t", {
     hotkeys: [
         {key: "t", description: "t: Reset for Top Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-        layerShown(){return true}
+    layerShown(){return true}
 })
 addLayer("p", {
     name: "Subatomical Formation", // This is optional, only used in a few places, If absent it just uses the layer id.
@@ -117,5 +124,5 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "p: Reset for Particles", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-        layerShown(){return true}
+    layerShown(){return true}
 })
