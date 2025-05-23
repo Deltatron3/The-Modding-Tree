@@ -14,6 +14,7 @@ addLayer("u", {
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.75, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
+        if (hasUpgrade('u', 11)) gain = gain.baseAmount(1)
         mult = new Decimal(1)
         return mult
     },
@@ -26,8 +27,8 @@ addLayer("u", {
     ],
     upgrades: {
         11: {
-        title: "",
-        description: "Double your point gain.",
+        title: "First duplications",
+        description: "Add +1 base to Gluon gain",
         cost: new Decimal(2),
         },
     
