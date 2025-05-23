@@ -26,7 +26,7 @@ addLayer("u", {
     ],
     upgrades: {
         11: {
-        title: "Up duplications 1",
+        title: "Up duplications",
         description: "Add +1 base to Gluon gain",
         cost: new Decimal(2),
         },
@@ -62,7 +62,7 @@ addLayer("c", {
     ],
      upgrades: {
         11: {
-        title: "Charm duplications 1",
+        title: "Charm duplications",
         description: "Add +1 base to Gluon gain",
         cost: new Decimal(2),
         },
@@ -96,6 +96,14 @@ addLayer("t", {
     hotkeys: [
         {key: "t", description: "t: Reset for Top Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
+     upgrades: {
+        11: {
+        title: "Top duplications",
+        description: "Add +1 base to Gluon gain",
+        cost: new Decimal(2),
+        },
+    
+    },
     layerShown(){return true}
 })
 addLayer("p", {
