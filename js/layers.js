@@ -15,7 +15,7 @@ addLayer("u", {
     exponent: 0.75, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
-        if (hasUpgrade('p', 11)) gain = gain.times(2)
+        if (hasUpgrade('First duplications 1', 11)) gain = gain.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -27,7 +27,7 @@ addLayer("u", {
     ],
     upgrades: {
         11: {
-        title: "First duplications",
+        title: "First duplications 1",
         description: "Add +1 base to Gluon gain",
         cost: new Decimal(2),
         },
