@@ -26,3 +26,11 @@ addLayer("p", {
     ],
     layerShown(){return true}
     })
+
+    upgrades: {
+        11: {
+    title: "",
+    description: "",
+    cost: new Decimal(2),
+        },
+    },
