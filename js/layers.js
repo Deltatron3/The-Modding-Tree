@@ -24,13 +24,12 @@ addLayer("p", {
     hotkeys: [
         {key: "q", description: "Q: Reset for Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
-    })
-
     upgrades: {
         11: {
-    title: "",
-    description: "",
-    cost: new Decimal(2),
+        title: "Make",
+        description: "Double your point gain.",
+        cost: new Decimal(1),
         },
     },
+    layerShown(){return true}
+})
