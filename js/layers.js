@@ -54,7 +54,7 @@ addLayer("c", {
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
-        if (hasUpgrade('t', 12)) mult = mult.times(2)
+        if (hasUpgrade('t', 12)) exp = exp.times(2)
         return new Decimal(1)
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
