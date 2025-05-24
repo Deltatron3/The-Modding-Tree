@@ -66,14 +66,11 @@ addLayer("c", {
         description: "Add +1 base to Gluon gain",
         cost: new Decimal(2),
         },
-    upgrades: {
-        12: {
+        11: {
         title: "Make this whatever you want!",
         description: "Double your point gain.",
         cost: new Decimal(10),
         },
-        },
-    
     },
     layerShown(){return true}
 })
