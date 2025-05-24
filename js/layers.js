@@ -84,7 +84,7 @@ addLayer("charm", {
         13: {
             title: "Self acceleration",
             description: "Gluon boosts itself",
-            cost: new Decimal(250),
+            cost: new Decimal(100),
             effectDisplay() { return "x" + format(this.effect()) },       
             effect() {
             return player.points.add(1).pow(0.15)
