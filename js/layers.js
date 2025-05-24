@@ -30,7 +30,14 @@ addLayer("u", {
         description: "Adds +1 base to Gluon gain",
         cost: new Decimal(2),
         },
-    
+        12: {
+        title: "Up acceleration",
+        description: "Up Quarks boosts gluon gain",
+        cost: new Decimal(15),
+        effect() {
+        return player.points.add(1).pow(0.15)
+        },
+        },
     },
     layerShown(){return true}
 })
@@ -54,7 +61,6 @@ addLayer("c", {
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
-        if (hasUpgrade('t', 12)) exp = exp.exp(2)
         return new Decimal(1)
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
