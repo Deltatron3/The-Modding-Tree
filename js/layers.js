@@ -111,7 +111,11 @@ addLayer("t", {
         description: "Adds +1 base to Gluon gain",
         cost: new Decimal(2),
         },
-    
+        12: {
+        title: "No inflation here",
+        description: "Makes Charm Quarks cheaper",
+        cost: new Decimal(15),
+        },
     },
     layerShown(){return true}
 })
