@@ -39,12 +39,7 @@ addLayer("up", {
             effect() {
             return player.up.points.add(1).pow(0.3)
             },
-        },
-        13: {
-            title: "Up duplication",
-            description: "Adds +1 base to Gluon gain",
-            cost: new Decimal(2),          
-        },
+        },                       
     },
     layerShown(){return true}
 })
