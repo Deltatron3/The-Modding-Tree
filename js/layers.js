@@ -16,6 +16,7 @@ addLayer("up", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         let mult = new Decimal(1)   
         if (hasUpgrade('top', 13)) mult = mult.times(2) 
+        if (hasUpgrade('up', 13)) mult = mult.times(upgradeEffect('up', 13))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -39,7 +40,16 @@ addLayer("up", {
             effect() {
             return player.up.points.add(1).pow(0.3)
             },
-        },                       
+        },   
+        13: {
+            title: "A little push",
+            description: "Up quark boosts itself weakly",
+            cost: new Decimal(250),   
+            effectDisplay() { return "×" + format(this.effect()) },       
+            effect() {
+            return player.up.add(1).pow(0.1)
+            },
+        },                          
     },
     layerShown(){return true}
 })
