@@ -24,7 +24,7 @@ addLayer("up", {
     hotkeys: [
         {key: "u", description: "u: Reset for Up Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    upgrades: {
+     upgrades: {
         11: {
         title: "Up duplications",
         description: "Adds +1 base to Gluon gain",
