@@ -1,4 +1,4 @@
-addLayer("u", {
+addLayer("up", {
     name: "Up Quarks", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "Q", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: -1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
@@ -35,13 +35,13 @@ addLayer("u", {
         description: "Up Quarks boosts gluon gain",
         cost: new Decimal(15),
         effect() {
-        return player.points.add(1).pow(0.15)
+        return player.up.points.add(1).pow(0.15)
         },
         },
     },
     layerShown(){return true}
 })
-addLayer("c", {
+addLayer("charm", {
     name: "Charm Quarks", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "Q", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
@@ -86,7 +86,7 @@ addLayer("c", {
     },
     layerShown(){return true}
 })
-addLayer("t", {
+addLayer("top", {
     name: "Top Quarks", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "Q", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
