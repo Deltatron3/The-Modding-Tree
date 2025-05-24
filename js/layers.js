@@ -24,7 +24,7 @@ addLayer("up", {
     hotkeys: [
         {key: "u", description: "u: Reset for Up Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-     upgrades: {
+    upgrades: {
         11: {
         title: "Up duplications",
         description: "Adds +1 base to Gluon gain",
@@ -64,7 +64,7 @@ addLayer("charm", {
     hotkeys: [
         {key: "c", description: "c: Reset for Charm Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-     upgrades: {
+    upgrades: {
         11: {
         title: "Charm duplications",
         description: "Adds +1 base to Gluon gain",
@@ -109,7 +109,7 @@ addLayer("top", {
     hotkeys: [
         {key: "t", description: "t: Reset for Top Quarks", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-     upgrades: {
+    upgrades: {
         11: {
         title: "Top duplications",
         description: "Adds +1 base to Gluon gain",
