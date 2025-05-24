@@ -47,7 +47,7 @@ addLayer("up", {
             cost: new Decimal(250),   
             effectDisplay() { return "×" + format(this.effect()) },       
             effect() {
-            return player.up.add(1).pow(0.1)
+            return player.up.points.add(1).pow(0.1)
             },
         },                          
     },
