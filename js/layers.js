@@ -71,6 +71,11 @@ addLayer("c", {
         description: "Doubles Gluon gain",
         cost: new Decimal(10),
         },
+        13: {
+        title: "Gluonology²",
+        description: "Triples Gluon gain",
+        cost: new Decimal(250),
+        },
     },
     layerShown(){return true}
 })
