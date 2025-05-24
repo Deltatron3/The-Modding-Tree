@@ -28,7 +28,7 @@ addLayer("up", {
         11: {
             title: "Up duplication",
             description: "Adds +1 base to Gluon gain",
-            cost: new Decimal(2),
+            cost: new Decimal(2),          
         },
         12: {
             title: "Up acceleration",
@@ -59,6 +59,7 @@ addLayer("charm", {
     exponent: 0.75, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+        if (hasUpgrade('top', 12)) gain = gain.add(1)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
