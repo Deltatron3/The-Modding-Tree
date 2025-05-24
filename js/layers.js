@@ -14,7 +14,8 @@ addLayer("up", {
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.75, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
-        let mult = new Decimal(1)    
+        let mult = new Decimal(1)   
+        if (hasUpgrade('top', 13)) mult = mult.times(2) 
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -114,6 +115,7 @@ addLayer("top", {
     exponent: 0.75, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+        if (hasUpgrade('top', 15)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -131,8 +133,27 @@ addLayer("top", {
         },
         12: {
             title: "No inflation here",
-            description: "Makes Charm Quarks cheaper",
+            description: "Doubles Charm quark gain",
             cost: new Decimal(15),
+        },
+        13: {
+            title: "No inflation there",
+            description: "Doubles Up quark gain",
+            cost: new Decimal(100),
+        },
+        14: {
+            title: "Top acceleration",
+            description: "Top quarks boosts gluon gain",
+            cost: new Decimal(1000),
+            effectDisplay() { return "×" + format(this.effect()) },       
+            effect() {
+            return player.top.points.add(1).pow(0.3)
+            },
+        },    
+        15: {
+            title: "Inflation nowhere",
+            description: "Doubles Top quark gain",
+            cost: new Decimal(1000),
         },
     },
     layerShown(){return true}
