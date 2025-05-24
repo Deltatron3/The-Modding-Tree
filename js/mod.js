@@ -49,6 +49,7 @@ function getPointGen() {
 	if (hasUpgrade('charm', 14)) gain = gain.times(3)
     if (hasUpgrade('up', 12)) gain = gain.times(upgradeEffect('up', 12))
 	if (hasUpgrade('charm', 13)) gain = gain.times(upgradeEffect('charm', 13))
+	if (hasUpgrade('top', 12)) gain = gain.times(2)
 	return gain
 }
 
