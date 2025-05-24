@@ -27,7 +27,7 @@ addLayer("u", {
     upgrades: {
         11: {
         title: "Up duplications",
-        description: "Add +1 base to Gluon gain",
+        description: "Adds +1 base to Gluon gain",
         cost: new Decimal(2),
         },
     
@@ -63,12 +63,12 @@ addLayer("c", {
      upgrades: {
         11: {
         title: "Charm duplications",
-        description: "Add +1 base to Gluon gain",
+        description: "Adds +1 base to Gluon gain",
         cost: new Decimal(2),
         },
         12: {
-        title: "Make this whatever you want!",
-        description: "Double your point gain.",
+        title: "Gluonology",
+        description: "Doubles Gluon gain",
         cost: new Decimal(10),
         },
     },
@@ -103,7 +103,7 @@ addLayer("t", {
      upgrades: {
         11: {
         title: "Top duplications",
-        description: "Add +1 base to Gluon gain",
+        description: "Adds +1 base to Gluon gain",
         cost: new Decimal(2),
         },
     
