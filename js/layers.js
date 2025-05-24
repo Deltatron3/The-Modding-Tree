@@ -26,17 +26,17 @@ addLayer("up", {
     ],
     upgrades: {
         11: {
-        title: "Up duplications",
-        description: "Adds +1 base to Gluon gain",
-        cost: new Decimal(2),
+            title: "Up duplications",
+            description: "Adds +1 base to Gluon gain",
+            cost: new Decimal(2),
         },
         12: {
-        title: "Up acceleration",
-        description: "Up Quarks boosts gluon gain",
-        cost: new Decimal(15),   
-            effect() {
-        return player.up.points.add(1).pow(0.15) 
-        },
+            title: "Up acceleration",
+            description: "Up Quarks boosts gluon gain",
+            cost: new Decimal(15),       
+            effectDisplay() {
+            return player.up.points.add(1).pow(0.15)
+            },
         },
     },
     layerShown(){return true}
@@ -69,19 +69,19 @@ addLayer("charm", {
     ],
     upgrades: {
         11: {
-        title: "Charm duplications",
-        description: "Adds +1 base to Gluon gain",
-        cost: new Decimal(2),
+            title: "Charm duplications",
+            description: "Adds +1 base to Gluon gain",
+            cost: new Decimal(2),
         },
         12: {
-        title: "Gluonology",
-        description: "Doubles Gluon gain",
-        cost: new Decimal(10),
+            title: "Gluonology",
+            description: "Doubles Gluon gain",
+            cost: new Decimal(10),
         },
         13: {
-        title: "Gluonology²",
-        description: "Triples Gluon gain",
-        cost: new Decimal(250),
+            title: "Gluonology²",
+            description: "Triples Gluon gain",
+            cost: new Decimal(250),
         },
     },
     layerShown(){return true}
@@ -114,14 +114,14 @@ addLayer("top", {
     ],
     upgrades: {
         11: {
-        title: "Top duplications",
-        description: "Adds +1 base to Gluon gain",
-        cost: new Decimal(2),
+            title: "Top duplications",
+            description: "Adds +1 base to Gluon gain",
+            cost: new Decimal(2),
         },
         12: {
-        title: "No inflation here",
-        description: "Makes Charm Quarks cheaper",
-        cost: new Decimal(15),
+            title: "No inflation here",
+            description: "Makes Charm Quarks cheaper",
+            cost: new Decimal(15),
         },
     },
     layerShown(){return true}
