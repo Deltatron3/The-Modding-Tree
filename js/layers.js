@@ -26,7 +26,7 @@ addLayer("up", {
     ],
     upgrades: {
         11: {
-            title: "Up duplications",
+            title: "Up duplication",
             description: "Adds +1 base to Gluon gain",
             cost: new Decimal(2),
         },
@@ -70,7 +70,7 @@ addLayer("charm", {
     ],
     upgrades: {
         11: {
-            title: "Charm duplications",
+            title: "Charm duplication",
             description: "Adds +1 base to Gluon gain",
             cost: new Decimal(2),
         },
@@ -80,9 +80,18 @@ addLayer("charm", {
             cost: new Decimal(10),
         },
         13: {
+            title: "Self acceleration",
+            description: "Gluon boosts itself",
+            cost: new Decimal(250),
+            effectDisplay() { return "x" + format(this.effect()) },       
+            effect() {
+            return player.points.add(1).pow(0.15)
+            },
+        },
+        14: {
             title: "Gluonology²",
             description: "Triples Gluon gain",
-            cost: new Decimal(250),
+            cost: new Decimal(500),
         },
     },
     layerShown(){return true}
@@ -115,7 +124,7 @@ addLayer("top", {
     ],
     upgrades: {
         11: {
-            title: "Top duplications",
+            title: "Top duplication",
             description: "Adds +1 base to Gluon gain",
             cost: new Decimal(2),
         },
