@@ -35,7 +35,7 @@ addLayer("u", {
         description: "Up Quarks boosts gluon gain",
         cost: new Decimal(15),
         effect() {
-        return player.Gluons.add(1).pow(0.15)
+        return player.points.add(1).pow(0.15)
         },
         },
     },
