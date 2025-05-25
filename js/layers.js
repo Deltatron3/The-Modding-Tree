@@ -196,5 +196,13 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "p: Reset for Particles", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
+    milestones: {
+        0: {
+            requirementDescription: "1 Total particle",
+            effectDescription: "Charm quarks boosts gluons slightly",
+            done() { return player.charm.points.gte(1)}
+        }
+        
+    },
     layerShown(){return true}
 })
