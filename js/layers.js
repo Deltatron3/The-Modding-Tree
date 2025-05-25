@@ -175,6 +175,7 @@ addLayer("p", {
     startData() { return {
         unlocked: true,
 		points: new Decimal(0),
+        total: new Decimal (0),
     }},
     color: "#9e9e9e",
     requires: new Decimal(10000000), // Can be a function that takes requirement increases into account
