@@ -204,7 +204,7 @@ addLayer("p", {
             effectDisplay() { return "×" + format(this.effect()) },                
             effect() {           
             return player.charm.points.add(1).pow(0.05)             
-        },             
+            },             
         },      
     },
     layerShown(){return true}
