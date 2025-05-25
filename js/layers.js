@@ -203,7 +203,8 @@ addLayer("p", {
             done() { return player.p.points.gte(1)},        
             effectDisplay() { return "×" + format(this.effect()) },                
             effect() {           
-            return player.charm.points.add(1).pow(0.05)                   
+            return player.charm.points.add(1).pow(0.05),  
+            hasmilestone('p', 0)
         },             
         },      
     },
