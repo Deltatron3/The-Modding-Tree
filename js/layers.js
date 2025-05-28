@@ -173,7 +173,7 @@ addLayer("p", {
     symbol: "P", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
-        unlocked: false,
+        unlocked: true,
 		points: new Decimal(0),
         total: new Decimal (0),
     }},
@@ -207,12 +207,23 @@ addLayer("p", {
         0: {
             requirementDescription: "1 Total particle",
             effectDescription: "Charm quarks boosts gluon gain slightly",
-            done() { return player.p.points.gte(1)},        
+            done() { return player.p.points.total(1)},        
             effectDisplay() { return "×" + format(this.effect()) },                
             effect() {           
             return player.charm.points.add(1).pow(0.05)             
             },             
-        },      
+        },          
     },
+    tabFormat: {
+        "Main tab": {
+            content: [Main],
+            hi
+            },
+        "Other tab": {
+            content: [Other],
+            hi
+            },
+        etc
+    },            
     layerShown(){return true}
 })
