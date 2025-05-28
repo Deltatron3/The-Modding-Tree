@@ -208,7 +208,7 @@ addLayer("p", {
             description: "5x Gluon",
             cost: new Decimal(2),
         },
-        12: {
+        13: {
             title: "Scaling",
             description: "5x Gluon",
             cost: new Decimal(5),
