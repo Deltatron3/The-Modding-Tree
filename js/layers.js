@@ -212,7 +212,7 @@ addLayer("p", {
             cost: new Decimal(2),
         },
         13: {
-            title: "Scaling",
+            title: "Third dimension",
             description: "Particles boosts every Quark gain strongly",
             cost: new Decimal(3),
             effectDisplay() { return "×" + format(this.effect()) },                
