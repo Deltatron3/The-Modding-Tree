@@ -217,7 +217,7 @@ addLayer("p", {
             cost: new Decimal(3),
             effectDisplay() { return "×" + format(this.effect()) },                
             effect() {           
-            return player.p.add(1).pow(1)
+            return player.p.points.add(1).pow(1)
             },
         },
     },
