@@ -221,7 +221,7 @@ addLayer("p", {
             },
         },
         14: {
-            title: "Third dimension",
+            title: "Manipulation",
             description: "Particles boosts Gluon gain strongly",
             cost: new Decimal(10),
             effectDisplay() { return "×" + format(this.effect()) },                
