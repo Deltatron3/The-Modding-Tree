@@ -83,5 +83,5 @@ function gridEffect(layer, id) {
 }
 
 function milestoneEffect(layer, id) {
-	return (tmp[layer].upgrades[id].effect)
+	return (tmp[layer].milestones[id].effect)
 }
