@@ -17,6 +17,7 @@ addLayer("up", {
         let mult = new Decimal(1)   
         if (hasUpgrade('top', 13)) mult = mult.times(2) 
         if (hasUpgrade('up', 13)) mult = mult.times(upgradeEffect('up', 13))
+        if (hasUpgrade('p', 13)) mult = mult.times(upgradeEffect('p', 13))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -72,6 +73,7 @@ addLayer("charm", {
         mult = new Decimal(1)
         if (hasUpgrade('top', 12)) mult = mult.times(2)
         if (hasUpgrade('p', 11)) mult = mult.times(2)
+        if (hasUpgrade('p', 13)) mult = mult.times(upgradeEffect('p', 13))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -127,6 +129,7 @@ addLayer("top", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
         if (hasUpgrade('top', 15)) mult = mult.times(2)
+        if (hasUpgrade('p', 13)) mult = mult.times(upgradeEffect('p', 13))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -175,7 +178,7 @@ addLayer("p", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(1),
+		points: new Decimal(4),
         total: new Decimal (0),
     }},
     color: "#9e9e9e",
@@ -210,8 +213,12 @@ addLayer("p", {
         },
         13: {
             title: "Scaling",
-            description: "5x Gluon",
-            cost: new Decimal(5),
+            description: "Particles boosts every Quark gain strongly",
+            cost: new Decimal(3),
+            effectDisplay() { return "×" + format(this.effect()) },                
+            effect() {           
+            return player.p.add(1).pow(1)
+            },
         },
     },
     milestones: {
