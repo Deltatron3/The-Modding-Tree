@@ -71,6 +71,7 @@ addLayer("charm", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
         if (hasUpgrade('top', 12)) mult = mult.times(2)
+        if (hasUpgrade('p', 11)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -198,8 +199,8 @@ addLayer("p", {
     ],
     upgrades: {
         11: {
-            title: "Make this whatever you want!",
-            description: "Double your point gain.",
+            title: "Double boost",
+            description: "Triples gluon gain and doubles Charm quark gain",
             cost: new Decimal(1),
         },
     },
