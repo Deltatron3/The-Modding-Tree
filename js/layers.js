@@ -208,7 +208,7 @@ addLayer("p", {
         0: {
             requirementDescription: "1 Total particle",
             effectDescription: "Charm quarks boosts gluon gain slightly",
-            done() { return player.p.points.total(1)},        
+            done() { return player.p.points.gte(1)},        
             effectDisplay() { return "×" + format(this.effect()) },                
             effect() {           
             return player.charm.points.add(1).pow(0.05)             
