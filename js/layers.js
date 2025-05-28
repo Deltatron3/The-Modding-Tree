@@ -213,17 +213,6 @@ addLayer("p", {
             return player.charm.points.add(1).pow(0.05)             
             },             
         },          
-    },
-    tabFormat: {
-        "Main tab": {
-            content: [Main],
-            hi
-            },
-        "Other tab": {
-            content: [Other],
-            hi
-            },
-        etc
     },            
     layerShown(){return true}
 })
