@@ -50,7 +50,14 @@ addLayer("up", {
             effect() {
             return player.up.points.add(1).pow(0.1)
             },
-        },                          
+        }, 
+        14: {
+            title: "A little push",
+            description: "Up quark boosts itself weakly",
+            cost: new Decimal(250), 
+            unlocked: false   
+                       
+        },                                
     },
     layerShown(){return true}
 })
@@ -228,6 +235,11 @@ addLayer("p", {
             effect() {           
             return player.p.points.add(1).pow(2)
             },
+        },
+        15: {
+            title: "Expansion",
+            description: "Unlock new Quark upgrades",
+            cost: new Decimal(1000),           
         },
     },
     milestones: {
