@@ -200,7 +200,7 @@ addLayer("p", {
     upgrades: {
         11: {
             title: "Double boost",
-            description: "Triples gluon gain and doubles Charm quark gain",
+            description: "Doubles gluon gain and Charm quark gain",
             cost: new Decimal(1),
         },
     },
