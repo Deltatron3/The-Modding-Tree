@@ -34,7 +34,7 @@ addLayer("up", {
         },
         12: {
             title: "Up acceleration",
-            description: "Up Quarks boosts gluon gain",
+            description: "Up Quarks boosts Gluon gain",
             cost: new Decimal(15),   
             effectDisplay() { return "×" + format(this.effect()) },       
             effect() {
@@ -154,7 +154,7 @@ addLayer("top", {
         },
         14: {
             title: "Top acceleration",
-            description: "Top quarks boosts gluon gain",
+            description: "Top quarks boosts Gluon gain",
             cost: new Decimal(1000),
             effectDisplay() { return "×" + format(this.effect()) },       
             effect() {
@@ -200,14 +200,24 @@ addLayer("p", {
     upgrades: {
         11: {
             title: "Double boost",
-            description: "Doubles gluon gain and Charm quark gain",
+            description: "Doubles Gluon gain and Charm quark gain",
             cost: new Decimal(1),
+        },
+        12: {
+            title: "Scaling",
+            description: "5x Gluon",
+            cost: new Decimal(2),
+        },
+        12: {
+            title: "Scaling",
+            description: "5x Gluon",
+            cost: new Decimal(5),
         },
     },
     milestones: {
         0: {
             requirementDescription: "1 Total particle",
-            effectDescription: "Charm quarks boosts gluon gain slightly",
+            effectDescription: "Charm quarks boosts Gluon gain slightly",
             done() { return player.p.points.gte(1)},        
             effectDisplay() { return "×" + format(this.effect()) },                
             effect() {           
