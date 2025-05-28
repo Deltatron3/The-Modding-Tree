@@ -220,6 +220,15 @@ addLayer("p", {
             return player.p.points.add(1).pow(1)
             },
         },
+        14: {
+            title: "Third dimension",
+            description: "Particles boosts Gluon gain strongly",
+            cost: new Decimal(10),
+            effectDisplay() { return "×" + format(this.effect()) },                
+            effect() {           
+            return player.p.points.add(1).pow(2)
+            },
+        },
     },
     milestones: {
         0: {
